@@ -14,9 +14,9 @@ import java.util.Enumeration;
  */
 @Slf4j
 @RestController
-public class NginxController {
+public class DefaultController {
 
-    @GetMapping("/nginx")
+    @GetMapping("/")
     public ResponseEntity<String> index(HttpServletRequest request) {
         log.info("Hello, Nginx!");
 
