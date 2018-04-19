@@ -10,6 +10,7 @@ import org.junit.Test;
 import java.io.IOException;
 
 /**
+ * 服务API测试
  * https://getkong.org/docs/0.13.x/admin-api/#service-object
  * @author zlikun <zlikun-dev@hotmail.com>
  * @date 2018/4/19 17:33
@@ -81,7 +82,7 @@ public class ServiceTest extends KongBase {
     public void retrieve() throws IOException {
 
         // 通过服务名或服务ID查询
-        String serviceName = "api_users";
+        String serviceName = "service_users";
         // 还支持通过路由查询服务：/routes/{route_id}/service，route_id非空
         Request request = new Request.Builder()
                 .url(admin + "/services/" + serviceName)
@@ -99,7 +100,7 @@ public class ServiceTest extends KongBase {
             "connect_timeout": 60000,
             "id": "a5e98b77-5d26-4175-b1a5-7ba55834b1d3",
             "protocol": "http",
-            "name": "api_users",
+            "name": "service_users",
             "read_timeout": 60000,
             "port": 80,
             "path": "\/users",
@@ -155,7 +156,7 @@ public class ServiceTest extends KongBase {
                     "connect_timeout": 60000,
                     "id": "a5e98b77-5d26-4175-b1a5-7ba55834b1d3",
                     "protocol": "http",
-                    "name": "api_users",
+                    "name": "service_users",
                     "read_timeout": 60000,
                     "port": 80,
                     "path": "\/users",
@@ -183,7 +184,7 @@ public class ServiceTest extends KongBase {
                 .build();
 
         // 通过服务名或服务ID更新，注意请求方法是：PATCH
-        String serviceName = "api_users";
+        String serviceName = "service_users";
         // 也可以通过路由ID更新：/routes/{route_id}/service，实际上路由与服务是多对一的关系，所以多端可以惟一确定一端
         Request request = new Request.Builder()
                 .url(admin + "/services/" + serviceName)
@@ -201,7 +202,7 @@ public class ServiceTest extends KongBase {
             "connect_timeout": 60000,
             "id": "a5e98b77-5d26-4175-b1a5-7ba55834b1d3",
             "protocol": "http",
-            "name": "api_users",
+            "name": "service_users",
             "read_timeout": 60000,
             "port": 80,
             "path": "\/users",
@@ -222,7 +223,7 @@ public class ServiceTest extends KongBase {
     public void delete() throws IOException {
 
         // 通过服务名或服务ID更新，注意请求方法是：DELETE
-        String serviceName = "api_users";
+        String serviceName = "service_users";
         Request request = new Request.Builder()
                 .url(admin + "/services/" + serviceName)
                 .delete()
