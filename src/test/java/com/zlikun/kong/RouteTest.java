@@ -36,7 +36,7 @@ public class RouteTest extends KongBase {
                 .add("strip_path", "true")
                 .add("preserve_host", "false")
                 // 关联的服务ID
-                .add("service.id", "f33b608b-16cc-4b0d-a78a-d1eeca99d66b")
+                .add("service.id", "5cf0494f-ded9-470c-82ef-07059b1d5c8e")
                 .build();
 
         // POST
@@ -63,7 +63,7 @@ public class RouteTest extends KongBase {
                 "\/users"
             ],
             "service": {
-                "id": "f33b608b-16cc-4b0d-a78a-d1eeca99d66b"
+                "id": "5cf0494f-ded9-470c-82ef-07059b1d5c8e"
             },
             "methods": [
                 "GET",
@@ -73,7 +73,7 @@ public class RouteTest extends KongBase {
                 "http",
                 "https"
             ],
-            "id": "55037ebd-6feb-4061-be11-8424891ba6be"
+            "id": "8358b021-6900-474c-8e88-83411b2fa7ae"
         }
         ----------------------------------------------------------------------------------- */
         log.info(response.body().string());
@@ -87,7 +87,7 @@ public class RouteTest extends KongBase {
     @Test
     public void retrieve() throws IOException {
 
-        String routeId = "55037ebd-6feb-4061-be11-8424891ba6be";
+        String routeId = "8358b021-6900-474c-8e88-83411b2fa7ae";
         Request request = new Request.Builder()
                 .url(admin + "/routes/" + routeId)
                 .get()
@@ -111,7 +111,7 @@ public class RouteTest extends KongBase {
                 "\/users"
             ],
             "service": {
-                "id": "f33b608b-16cc-4b0d-a78a-d1eeca99d66b"
+                "id": "5cf0494f-ded9-470c-82ef-07059b1d5c8e"
             },
             "methods": [
                 "GET",
@@ -121,7 +121,7 @@ public class RouteTest extends KongBase {
                 "http",
                 "https"
             ],
-            "id": "55037ebd-6feb-4061-be11-8424891ba6be"
+            "id": "8358b021-6900-474c-8e88-83411b2fa7ae"
         }
         ----------------------------------------------------------------------------------- */
         log.info(response.body().string());
@@ -181,7 +181,7 @@ public class RouteTest extends KongBase {
                         "\/users"
                     ],
                     "service": {
-                        "id": "f33b608b-16cc-4b0d-a78a-d1eeca99d66b"
+                        "id": "5cf0494f-ded9-470c-82ef-07059b1d5c8e"
                     },
                     "methods": [
                         "GET",
@@ -191,7 +191,7 @@ public class RouteTest extends KongBase {
                         "http",
                         "https"
                     ],
-                    "id": "55037ebd-6feb-4061-be11-8424891ba6be"
+                    "id": "8358b021-6900-474c-8e88-83411b2fa7ae"
                 }
             ]
         }
@@ -234,7 +234,7 @@ public class RouteTest extends KongBase {
                         "\/users"
                     ],
                     "service": {
-                        "id": "f33b608b-16cc-4b0d-a78a-d1eeca99d66b"
+                        "id": "5cf0494f-ded9-470c-82ef-07059b1d5c8e"
                     },
                     "methods": [
                         "GET",
@@ -244,7 +244,7 @@ public class RouteTest extends KongBase {
                         "http",
                         "https"
                     ],
-                    "id": "55037ebd-6feb-4061-be11-8424891ba6be"
+                    "id": "8358b021-6900-474c-8e88-83411b2fa7ae"
                 }
             ]
         }
@@ -268,7 +268,7 @@ public class RouteTest extends KongBase {
                 .add("hosts[]", "api.zlikun.com")
                 .build();
 
-        String routeId = "55037ebd-6feb-4061-be11-8424891ba6be";
+        String routeId = "8358b021-6900-474c-8e88-83411b2fa7ae";
         Request request = new Request.Builder()
                 .url(admin + "/routes/" + routeId)
                 .patch(body)
@@ -293,7 +293,7 @@ public class RouteTest extends KongBase {
                 "\/v1\/users"
             ],
             "service": {
-                "id": "f33b608b-16cc-4b0d-a78a-d1eeca99d66b"
+                "id": "5cf0494f-ded9-470c-82ef-07059b1d5c8e"
             },
             "methods": [
                 "GET"
@@ -302,7 +302,7 @@ public class RouteTest extends KongBase {
                 "http",
                 "https"
             ],
-            "id": "55037ebd-6feb-4061-be11-8424891ba6be"
+            "id": "8358b021-6900-474c-8e88-83411b2fa7ae"
         }
         ----------------------------------------------------------------------------------- */
         log.info(response.body().string());
@@ -316,7 +316,7 @@ public class RouteTest extends KongBase {
     @Test
     public void delete() throws IOException {
 
-        String routeId = "55037ebd-6feb-4061-be11-8424891ba6be";
+        String routeId = "8358b021-6900-474c-8e88-83411b2fa7ae";
         Request request = new Request.Builder()
                 .url(admin + "/routes/" + routeId)
                 .delete()

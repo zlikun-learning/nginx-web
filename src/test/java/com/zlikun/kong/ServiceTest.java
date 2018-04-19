@@ -28,7 +28,7 @@ public class ServiceTest extends KongBase {
         // 请求体
         RequestBody body = new FormBody.Builder()
                 // 服务名称，可选
-                .add("name", "api_users")
+                .add("name", "service_users")
                 // 由：protocol + host + port + path 组成，这四个参数与url至少有一方必填
                 .add("url", api + "/users")
                 // 请求重试次数，默认：5
@@ -60,7 +60,7 @@ public class ServiceTest extends KongBase {
             "connect_timeout": 60000,
             "id": "a5e98b77-5d26-4175-b1a5-7ba55834b1d3",
             "protocol": "http",
-            "name": "api_users",
+            "name": "service_users",
             "read_timeout": 60000,
             "port": 80,
             "path": "\/users",
